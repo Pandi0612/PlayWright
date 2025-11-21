@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MyStore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+ 
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px;
+        }
+ 
+        .login-box {
+            background-color: white;
+            padding: 30px;
+            width: 330px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-right: 40px;
+        }
+ 
+        .login-box h2 {
+            font-weight: normal;
+        }
+ 
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #bbb;
+            border-radius: 4px;
+        }
+ 
+        .btn {
+            width: 100%;
+            background-color: #ff9900;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+ 
+        .btn:hover {
+            background-color: #e68a00;
+        }
+ 
+        .products {
+            max-width: 300px;
+        }
+ 
+        .products h3 {
+            margin-top: 0;
+        }
+ 
+        .product-item {
+            background: white;
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+ 
+        .product-item strong {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="container">
+ 
+        <!-- Login Form -->
+        <div class="login-box">
+            <h2>Sign-In</h2>
+ 
+            <label for="email"><strong>Email or mobile phone number</strong></label>
+            <input type="text" id="email" placeholder="Enter email">
+ 
+            <label for="password"><strong>Password</strong></label>
+            <input type="password" id="password" placeholder="Enter password">
+ 
+            <button class="btn">Sign In</button>
+ 
+            <p style="margin-top: 15px; font-size: 14px;">
+                By continuing, you agree to MyStore's Conditions of Use & Privacy Notice.
+            </p>
+ 
+            <hr>
+ 
+            <button class="btn" style="background-color: #e7e9ec; color: #000; margin-top:10px;">
+                Create your MyStore account
+            </button>
+        </div>
+ 
+        <!-- Product Categories -->
+        <div class="products">
+            <h3>Our Products</h3>
+ 
+            <div class="product-item">
+                <strong>Electronics</strong>
+                <p>Phones, tablets, laptops, and accessories.</p>
+            </div>
+ 
+            <div class="product-item">
+                <strong>Home & Kitchen</strong>
+                <p>Appliances, furniture, and decor.</p>
+            </div>
+ 
+            <div class="product-item">
+                <strong>Fashion</strong>
+                <p>Men’s, women’s, and kids' clothing.</p>
+            </div>
+ 
+            <div class="product-item">
+                <strong>Books</strong>
+                <p>Best sellers, textbooks, and more.</p>
+            </div>
+        </div>
+ 
+    </div>
+ 
+</body>
+</html>

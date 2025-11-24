@@ -1,141 +1,96 @@
-/* Global styling */
-body {
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    background: #faf7f2;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
- 
-/* Centered container for login page */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+
+/* Body Styling */
+body {
+    background-color: #fdfdfd;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
 }
- 
-/* Login card */
-.login-card {
-    background: #ffffff;
-    padding: 40px 50px;
-    width: 350px;
-    border-radius: 14px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    text-align: center;
-}
- 
-.login-card h2 {
-    color: #444;
-    font-size: 28px;
-}
- 
-.subtitle {
-    color: #777;
-    margin-bottom: 25px;
-}
- 
-/* Labels & Inputs */
-label {
-    text-align: left;
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-    font-size: 14px;
-}
- 
-input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 18px;
-    border: 1px solid #dcd4c5;
-    border-radius: 8px;
-    background: #fefdfb;
-}
- 
-input:focus {
-    border-color: #caa56a;
-    outline: none;
-    box-shadow: 0 0 6px rgba(202,165,106,0.4);
-}
- 
-/* Button */
-button {
-    width: 100%;
-    padding: 12px;
-    background: #caa56a;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-}
- 
-button:hover {
-    background: #b48f58;
-}
- 
-.footer-text {
-    margin-top: 10px;
-    font-size: 14px;
-}
- 
-/* Products page */
+
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: white;
-    padding: 20px 40px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    background: #6a5acd;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
 }
- 
+
+.header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
 .logout-btn {
-    background: #caa56a;
-    padding: 8px 16px;
-    color: white;
-    border-radius: 6px;
+    background: #ff6b6b;
+    color: #fff;
     text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
 }
- 
+
 .logout-btn:hover {
-    background: #b48f58;
+    background: #e63946;
 }
- 
+
+/* Product Section */
 .product-section {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
 }
- 
+
+/* Product Card */
 .product-card {
-    width: 260px;
-    background: white;
-    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     padding: 15px;
     text-align: center;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
- 
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
 .product-card img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
- 
+
 .product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
     color: #444;
 }
- 
+
 .product-card p {
+    font-size: 0.95rem;
     color: #666;
+    margin-bottom: 12px;
 }
- 
+
 .price {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #caa56a;
+    display: inline-block;
+    font-size: 1.1rem;
     font-weight: bold;
-    display: block;
-}
+    color: #6a5acd;
+    background: #f0f0ff;
+    padding: 6px 12px;
+    border-radius: 5px;

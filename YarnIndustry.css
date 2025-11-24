@@ -1,12 +1,11 @@
-/* General Reset */
+/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Body Styling */
 body {
     background-color: #fdfdfd;
     color: #333;
@@ -19,7 +18,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #6a5acd;
+    background: #6a5acd; /* soft purple */
     color: #fff;
     padding: 15px 30px;
     border-radius: 8px;
@@ -28,7 +27,6 @@ body {
 
 .header h1 {
     font-size: 1.8rem;
-    font-weight: bold;
 }
 
 .logout-btn {
@@ -94,3 +92,4 @@ body {
     background: #f0f0ff;
     padding: 6px 12px;
     border-radius: 5px;
+}

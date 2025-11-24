@@ -3,132 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - MyStore</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-        }
- 
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 40px;
-        }
- 
-        .login-box {
-            background-color: white;
-            padding: 30px;
-            width: 330px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin-right: 40px;
-        }
- 
-        .login-box h2 {
-            font-weight: normal;
-        }
- 
-        input[type="text"], input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            border: 1px solid #bbb;
-            border-radius: 4px;
-        }
- 
-        .btn {
-            width: 100%;
-            background-color: #ff9900;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-        }
- 
-        .btn:hover {
-            background-color: #e68a00;
-        }
- 
-        .products {
-            max-width: 300px;
-        }
- 
-        .products h3 {
-            margin-top: 0;
-        }
- 
-        .product-item {
-            background: white;
-            padding: 12px;
-            margin-bottom: 12px;
-            border-radius: 6px;
-            border: 1px solid #ddd;
-        }
- 
-        .product-item strong {
-            font-size: 16px;
-        }
-    </style>
+    <title>Login – Yarn Store</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
  
-    <div class="container">
+<div class="container">
+    <div class="login-card">
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Login to see our yarn collections</p>
  
-        <!-- Login Form -->
-        <div class="login-box">
-            <h2>Sign-In</h2>
+        <form onsubmit="return loginUser()">
+            <label for="userid">Login ID</label>
+            <input type="text" id="userid" required>
  
-            <label for="email"><strong>Email or mobile phone number</strong></label>
-            <input type="text" id="email" placeholder="Enter email">
+            <label for="password">Password</label>
+            <input type="password" id="password" required>
  
-            <label for="password"><strong>Password</strong></label>
-            <input type="password" id="password" placeholder="Enter password">
+            <button type="submit">Login</button>
+        </form>
  
-            <button class="btn">Sign In</button>
- 
-            <p style="margin-top: 15px; font-size: 14px;">
-                By continuing, you agree to MyStore's Conditions of Use & Privacy Notice.
-            </p>
- 
-            <hr>
- 
-            <button class="btn" style="background-color: #e7e9ec; color: #000; margin-top:10px;">
-                Create your MyStore account
-            </button>
-        </div>
- 
-        <!-- Product Categories -->
-        <div class="products">
-            <h3>Our Products</h3>
- 
-            <div class="product-item">
-                <strong>Electronics</strong>
-                <p>Phones, tablets, laptops, and accessories.</p>
-            </div>
- 
-            <div class="product-item">
-                <strong>Home & Kitchen</strong>
-                <p>Appliances, furniture, and decor.</p>
-            </div>
- 
-            <div class="product-item">
-                <strong>Fashion</strong>
-                <p>Men’s, women’s, and kids' clothing.</p>
-            </div>
- 
-            <div class="product-item">
-                <strong>Books</strong>
-                <p>Best sellers, textbooks, and more.</p>
-            </div>
-        </div>
- 
+        <p class="footer-text">Forgot password? <a href="#">Click here</a></p>
     </div>
+</div>
+ 
+<script>
+    function loginUser() {
+        let id = document.getElementById("userid").value;
+        let pw = document.getElementById("password").value;
+ 
+        if (id && pw) {
+            window.location.href = "products.html";
+            return false;
+        }
+        return false;
+    }
+</script>
+ 
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarn Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<header class="header">
+    <h1>Yarn Collections</h1>
+    <a href="login.html" class="logout-btn">Logout</a>
+</header>
+ 
+<div class="product-section">
+ 
+    <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?auto=format&fit=crop&w=600&q=60" alt="Soft Wool Yarn">
+        <h3>Soft Wool Yarn</h3>
+        <p>Warm & cozy wool perfect for scarves and sweaters.</p>
+        <span class="price">$12.99</span>
+    </div>
+ 
+    <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=60" alt="Cotton Yarn">
+        <h3>Cotton Yarn</h3>
+        <p>Eco-friendly cotton ideal for breathable baby blankets.</p>
+        <span class="price">$9.50</span>
+    </div>
+ 
+    <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1604335399105-42bb7fdfb82d?auto=format&fit=crop&w=600&q=60" alt="Chunky Yarn">
+        <h3>Chunky Yarn</h3>
+        <p>Thick yarn perfect for fast, cozy projects.</p>
+        <span class="price">$14.75</span>
+    </div>
+ 
+</div>
  
 </body>
 </html>
